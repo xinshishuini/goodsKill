@@ -1,70 +1,57 @@
 # goodsKill - AI Gateway & Microservice Platform
 
-本项目是一个基于 Spring Cloud 的高并发秒杀与 AI 能力接入平台，核心聚焦于统一网关、微服务治理、权限认证和 AI 能力封装等方面。项目在保留原有扩展能力的基础上，强调其作为后端/AI 工程实践项目的主线价值，适合用于项目展示、实习经历和岗位投递。
+This project is a Java-based distributed system centered on a Spring Cloud microservice architecture, with a focus on API gateway management, authentication, AI capability integration, and high-concurrency request handling in a simulated seckill scenario.
 
-## 项目定位
+## Project Direction
 
-本项目围绕以下核心问题展开：
-- 如何统一管理多个微服务入口？
-- 如何通过网关实现路由、鉴权和流量管理？
-- 如何在高并发场景中保证秒杀逻辑的安全性与一致性？
-- 如何将 AI 能力统一封装为服务能力供业务调用？
+The project is designed to demonstrate the following engineering capabilities:
 
-因此，项目的主线可以概括为：
+- Unified API gateway routing and request handling
+- Service registration, discovery, and configuration management
+- Authentication and access control
+- AI capability integration and service abstraction
+- High-concurrency traffic control and distributed system design
 
-AI 网关 + 微服务接入 + 权限控制 + 分布式能力 + 高并发场景
+The primary technical focus is not only the seckill scenario itself, but also the backend engineering patterns behind it.
 
-## 核心模块
+## Main Modules Kept for Resume / Project Showcase
 
-项目中最适合展示的核心模块如下：
+The following modules are the most relevant for demonstrating backend engineering and AI integration capabilities:
 
-- goodskill-gateway
-  - 统一 API 入口
-  - 路由转发
-  - 权限校验与流量控制
-  - 面向微服务统一访问
+- `goodskill-gateway`
+  - Unified request entry
+  - Route forwarding
+  - Authentication and request filtering
+  - Traffic management and service access control
 
-- goodskill-auth
-  - 登录与权限认证
-  - 用户访问控制
-  - 统一鉴权能力封装
+- `goodskill-auth`
+  - Login and authorization logic
+  - Access control and permission validation
+  - Security-related backend capability
 
-- goodskill-ai
-  - AI 能力接入
-  - 知识库管理
-  - 模型调用封装与统一异常处理
+- `goodskill-ai`
+  - AI model/service integration
+  - Knowledge base management
+  - Unified AI request handling and error management
 
-- goodskill-common
-  - 公共组件
-  - 通用返回封装
-  - 工具类与基础服务能力
+- `goodskill-common`
+  - Shared utilities
+  - Unified response structures
+  - Common business and infrastructure support
 
-- goodskill-order-provider
-  - 订单业务服务
-  - 业务处理逻辑的微服务化实现
+- `goodskill-web`
+  - API-facing entry for mock seckill operations
+  - Business simulation and request triggering layer
 
-- goodskill-seckill-provider
-  - 秒杀核心逻辑
-  - 库存处理与业务时序控制
+- `goodskill-order-provider`
+  - Order service logic
+  - Business logic separation from gateway and request layer
 
-- goodskill-web
-  - 秒杀模拟接口入口
-  - 业务触发层
+- `goodskill-seckill-provider`
+  - Core seckill logic
+  - Inventory and concurrency-sensitive operation handling
 
-## 适合简历展示的技术能力
-
-本项目体现了较完整的后端工程能力，适合用于简历中展示以下能力：
-
-- Spring Cloud / 微服务架构
-- Spring Cloud Gateway Unified API Gateway
-- 分布式系统与服务治理
-- Redis、MySQL、Nacos 等基础组件接入
-- 分布式锁、限流与高并发处理思路
-- 统一异常处理与通用返回设计
-- AI 接口封装与业务集成
-- 权限认证和安全访问控制
-
-## 技术栈
+## Core Technical Stack
 
 - Java 21
 - Spring Boot 4.x
@@ -78,85 +65,56 @@ AI 网关 + 微服务接入 + 权限控制 + 分布式能力 + 高并发场景
 - MongoDB
 - Elasticsearch
 - RabbitMQ
-- Dubbo
-- Seata
 - MyBatis Plus
+- Dubbo
 - Sa-Token
+- OpenTelemetry
 
-## 项目亮点
+## Resume-Friendly Project Highlights
 
-### 1. AI 能力接入
+### 1. API Gateway and Unified Access
 
-项目中 goodskill-ai 模块体现了对 AI 能力的集成与封装，支持：
-- AI 对话
-- 知识库管理
-- 模型调用统一封装
-- AI 对业务流程的辅助接入
+The gateway layer serves as the centralized entry for service access and request routing. It unifies backend service exposure and helps manage access authority, request distribution, and business isolation.
 
-这使项目不仅适合后端工程展示，也兼具 AI 服务接入能力。
+### 2. Authentication and Security Design
 
-### 2. 统一网关能力
+The auth module provides backend support for access control, login logic, and permission management. This demonstrates practical experience in securing service endpoints and managing user access.
 
-goodskill-gateway 负责统一请求入口，对不同微服务进行路由和访问管理，体现了常见的 API 网关设计能力：
-- 路由转发
-- 鉴权控制
-- 统一访问入口
-- 业务能力聚合
+### 3. AI Capability Integration
 
-### 3. 高并发场景设计
+The AI module introduces AI-based service capabilities such as model invocation, knowledge-base enhancement, and unified service-layer integration. This is a strong indicator of backend + AI engineering readiness.
 
-项目中的秒杀模块展示了高并发场景下的关键思路：
-- 分布式锁
-- Redis 缓存
-- Kafka 消息处理
-- 数据一致性处理
-- 限流与请求控制
+### 4. High-Concurrency Backend Design
 
-### 4. 工程化能力
+The seckill scenario highlights distributed system patterns including:
+- concurrency control
+- distributed locking
+- cache utilization
+- queue-based asynchronous processing
+- request traffic handling
 
-项目整体保留了较完整的工程化结构，包括：
-- 多模块设计
-- 公共组件抽象
-- 统一配置中心
-- 中间件接入
-- 多场景业务支持
+### 5. Engineering Structure and Extendability
 
-## 可选中间件说明
+The project keeps a multi-module design that is easy to extend. It demonstrates understanding of backend architecture, service decoupling, configuration management, and infrastructure integration.
 
-本项目保留了多种中间件与扩展能力，例如 Kafka、RabbitMQ、MongoDB、Elasticsearch 等。这些组件有助于展示项目的扩展性与学习价值，但它们并不是本项目的唯一主线。项目的核心价值依然集中在：
+## Hidden / Non-Core Modules
 
-- 网关统一接入
-- 服务治理
-- 认证鉴权
-- AI 能力接入
-- 高并发秒杀场景
+The following modules are kept for project completeness but are not the primary focus for resume presentation:
 
-因此，在简历中建议突出主线能力，而不是把所有中间件都堆砌成项目亮点。
+- monitoring/admin modules
+- auxiliary demo or extended feature modules
+- optional experimental integrations
+- secondary business extensions not directly related to the main architecture narrative
 
-## 项目适用场景
+These modules remain available in the repository for learning and experimentation, but the project story should emphasize the main line:
 
-本项目适合作为：
-- 后端开发实习项目
-- Java 后端/微服务项目展示
-- AI + 后端融合方向项目背景
-- 分布式系统与高并发知识实践项目
+AI Gateway + Microservice Architecture + Security + AI Integration + High-Concurrency Business Logic
 
-## 结论
+## Recommended Resume Summary
 
-goodsKill 是一个偏工程实践、偏系统设计的 Java 后端项目。若用于简历，应重点突出：
-- Spring Cloud Gateway
-- 微服务架构与服务治理
-- AI 接口封装与集成
-- 分布式/高并发场景
-- 权限体系与工程能力
+The project is a distributed backend platform built around Spring Cloud and AI service integration, with emphasis on gateway routing, authentication, and high-concurrency request handling. It demonstrates experience in microservice architecture, backend infrastructure integration, and AI-capable service design.
 
-它不是单纯的秒杀业务 demo，而是一个具有较强工程实践价值的后端/AI 项目。
+## Project Philosophy
 
----
-
-以下为原项目的详细说明保留内容，适合在项目仓库中继续查看：
-
-- 详细模块配置与开发环境说明见 README 原文
-- 具体中间件与启动方式参考 docker-compose.yml
-- AI 相关说明参考 goodskill-ai/README.md
+This repository is not just a single seckill demo; it is a practical backend project that demonstrates real system-level concerns, including service isolation, request management, scalable architecture, and AI-based business capability integration.
 
